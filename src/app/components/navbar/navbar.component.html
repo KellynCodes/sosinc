@@ -1,1 +1,104 @@
-<p>navbar works!</p>
+<div class="hidden md:flex justify-between items-center h-[4em]">
+  <div class="flex items-center justify-center w-[20%]">
+    <a routerLink="/">
+      <h1 class="text-3xl text-primary">SOSIC</h1>
+    </a>
+  </div>
+
+  <ul class="flex items-center justify-evenly w-[78%]">
+    <li class="flex items-center justify-center gap-3">
+      <h5>Emergency</h5>
+      <img
+        src="/assets/svgs/phone.svg"
+        alt="phone"
+        class="w-[1.5rem] h-[2rem]"
+      />
+      <a href="tel:+17143942798">+17143942798</a>
+    </li>
+
+    <li class="flex items-center justify-center gap-3">
+      <h5>Location</h5>
+      <img
+        src="/assets/svgs/location.svg"
+        alt="Location"
+        class="w-[1.5rem] h-[2rem]"
+      />
+      <a
+        href="https://maps.app.goo.gl/c8ghPzKvT5FxjL1c8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        1010 Nut Tree Road, Vacaville, CA, 95687</a
+      >
+    </li>
+  </ul>
+</div>
+
+<nav
+  class="w-full max-w-[100vw] h-[4rem] bg-primary flex items-center justify-between"
+>
+  <div class="flex md:hidden items-center justify-start pl-3 w-[45%]">
+    <a routerLink="/">
+      <h1 class="text-3xl text-white">SOSIC</h1>
+    </a>
+  </div>
+  <ul [class]="IsOpen ? 'navbar open' : 'navbar close'">
+    <li (click)="toggle()">
+      <a
+        class="text-white font-semibold hover:text-secondary"
+        routerLink="/home"
+        routerLinkActive="text-secondary"
+        >Home</a
+      >
+    </li>
+    <li (click)="toggle()">
+      <a
+        class="text-white font-semibold hover:text-secondary"
+        routerLink="/about"
+        routerLinkActive="text-secondary"
+        >About Us</a
+      >
+    </li>
+    <li (click)="toggle()">
+      <a
+        class="text-white font-semibold hover:text-secondary"
+        routerLink="/services"
+        routerLinkActive="text-secondary"
+        >Services</a
+      >
+    </li>
+    <li (click)="toggle()">
+      <a
+        class="text-white font-semibold hover:text-secondary"
+        routerLink="/contact"
+        routerLinkActive="text-secondary"
+        >Contact Us</a
+      >
+    </li>
+    <li class="sm:hidden" (click)="toggle()">
+      <a
+        class="text-white font-semibold hover:text-secondary"
+        routerLink="/appointment"
+        routerLinkActive="text-secondary"
+        >Book Appointment</a
+      >
+    </li>
+  </ul>
+
+  <div class="flex justify-around items-center gap-3 w-[45%] md:w-[35%]">
+    <sosinc-button
+      className="bg-accent text-primary hover:bg-secondary hover:text-white"
+      label="Appointment"
+      link="/appointment"
+    />
+
+    <div
+      [class]="IsOpen ? 'navbar-toggle active' : 'navbar-toggle'"
+      (click)="toggle()"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>

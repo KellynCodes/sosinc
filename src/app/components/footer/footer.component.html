@@ -1,1 +1,91 @@
-<p>footer works!</p>
+<footer
+  class="w-full h-fit py-4 md:h-fit min-h-[26.6rem] bg-primary flex flex-wrap items-center justify-center"
+>
+  <div
+    class="flex mx-auto justify-evenly w-full h-full py-4 flex-col md:flex-row lg:w-[88%]"
+  >
+    <div class="footer-items">
+      <a routerLink="/">
+        <h1 class="text-3xl text-white">SOSIC</h1>
+      </a>
+
+      <p class="mt-4 text-white">
+        Leading the Way in Orthopedic Medical Excellence, Trusted Care.
+      </p>
+    </div>
+    <div class="footer-items">
+      <h1 class="text-3xl text-white">Important Links</h1>
+
+      <ul class="footer-ul">
+        @for (link of importantLinks(); track link.id) {
+        <li>
+          @if(link.type == linkType.href){
+          <a
+            class="text-white hover:text-secondary"
+            href="{{ link.url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ link.linkText }}
+          </a>
+          }@else{
+
+          <a
+            class="text-white hover:text-secondary"
+            [routerLink]="link.url"
+            [routerLinkActive]="link.activeClass!"
+          >
+            {{ link.linkText }}
+          </a>
+          }
+        </li>
+        }
+      </ul>
+    </div>
+    <div class="footer-items">
+      <h1 class="text-3xl text-white">Contact Us</h1>
+
+      <ul class="footer-ul">
+        @for (link of contactLinks(); track link.id) {
+        <li>
+          @if(link.type == linkType.href){
+          <a
+            class="text-white hover:text-secondary"
+            href="{{ link.url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ link.linkText }}</a
+          >
+          }@else{
+
+          <a class="text-white hover:text-secondary" [routerLink]="link.url">
+            {{ link.linkText }}
+          </a>
+          }
+        </li>
+        }
+      </ul>
+    </div>
+    <div class="footer-items gap-6">
+      <h1 class="text-3xl text-white">NewsLetter</h1>
+      <form
+        [formGroup]="newLetterSubscriptionForm"
+        (ngSubmit)="onSubmit()"
+        class="w-[17rem] md:w-full h-16 flex items-center justify-between px-1 gap-3 bg-accent rounded-md text-center"
+      >
+        <input
+          class="bg-accent border-none px-3 outline-none w-full h-full text-start text-primary font-[400] text-sm"
+          type="text"
+          placeholder="Enter Your Email Address"
+        />
+
+        <button class="outline-none border-none" type="submit">
+          <img
+            class="w-11 h-11"
+            src="/assets/svgs/paper-plane.svg"
+            alt="Send"
+          />
+        </button>
+      </form>
+    </div>
+  </div>
+</footer>
