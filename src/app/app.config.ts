@@ -10,11 +10,7 @@ import { TemplatePageTitleStrategy } from './extensions/title.strategy';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(
-      routes,
-
-      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
-    ),
+    provideRouter(routes),
     {
       provide: TitleStrategy,
       useClass: TemplatePageTitleStrategy,

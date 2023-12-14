@@ -1,26 +1,38 @@
-<section class="bg-primary">
-  <h1 class="text-3xl text-white font-bold text-center mx-auto">
-    Our Services
-  </h1>
+<div id="services" class="service-container">
+  <div class="felx flex-col items-center justify-center z-50">
+    <h1 class="text-3xl text-white font-bold text-center mx-auto">
+      Our Services
+    </h1>
 
-  <div class="w-full flex flex-wrap mt-4">
-    @for (service of [1,2,3]; track $index) {
-    <div class="flex w-[20%]">
-      <h2 class="text-2xl text-white">PHYSICAL THERAPY</h2>
-      <hr class="bg-white w-full h-8" />
-      <img
-        src="/images/services/web.jpg"
-        alt=""
-        class="w-full h-52 rounded shadow-md m"
-      />
+    <div
+      class="w-full h-fit flex items-center justify-center gap-4 flex-wrap m-4 px-5"
+    >
+      @for (service of [1,2,3,4]; track $index) {
+      <div
+        class="border border-white flex items-center justify-center w-full sm:w-[35%] lg:w-[25%] flex-col gap-2 px-8 md:px-4 py-6"
+      >
+        <img
+          src="../../../assets/images/services/massage-technique.jpg"
+          alt=""
+          class="w-full h-60 md:h-52 rounded shadow-md"
+        />
 
-      <div class="flex">
-        <h3 class="font-bold text-xl mb-2">Web Development</h3>
-        <p class="text-gray-700 text-base ml-8">
-          We offer custom web development services to build your business
-        </p>
+        <h2 class="text-2xl text-white">PHYSICAL THERAPY</h2>
+        <hr class="bg-white w-full h-1" />
+
+        <div class="flex flex-col gap-3">
+          <h3 class="font-bold text-xl my-2 text-white">Web Development</h3>
+          <p class="text-white text-base">
+            We offer custom web development services to build your business
+          </p>
+        </div>
+        <sosinc-button
+          className="bg-transparent text-white hover:bg-primary duration-500 text-base border border-white"
+          label="Learn More"
+          link="/about"
+        />
       </div>
+      }
     </div>
-    }
   </div>
-</section>
+</div>

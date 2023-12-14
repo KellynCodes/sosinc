@@ -1,0 +1,18 @@
+.service-container {
+  @apply bg-transparent relative flex items-center justify-center flex-col min-h-screen w-full h-auto py-10 object-cover z-0;
+  background-image: url("../../../assets/images/orthopedic/hero.jpeg");
+  background-repeat: no-repeat;
+  background-position:  center;
+}
+
+@media (min-width: 1000px) {
+  .service-container {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.service-container::after {
+  content: "";
+  @apply h-auto w-full bg-[#000000d2] inset-0 absolute z-0;
+}
