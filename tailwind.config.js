@@ -2,7 +2,11 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
     fontFamily: {
-      sans: "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+      sans: "Sans",
+      inter: "Inter",
+      worksans: "Work Sans",
+      roboto: "Roboto",
+      notosans: "Noto Sans",
     },
     opacity: {
       0: "0",

@@ -1,4 +1,30 @@
-section img::after{
-content: "",
+.hero-container {
+  @apply bg-transparent relative flex items-center justify-around min-h-screen w-full h-[100vh] md:h-[80vh] object-cover z-0;
+  background-image: url("../../../assets/images/orthopedic/hero.jpeg");
+  background-repeat: no-repeat;
+  background-position:  center;
+}
 
+.hero-container .hero{
+  @apply w-full sm:w-[90%] lg:w-[50%] h-full md:h-[80%] m-auto flex items-center justify-center z-50;
+}
+
+ul li a{
+  @apply  w-[13rem] h-16 flex items-center justify-center gap-2 bg-primary hover:bg-blue-900 text-white rounded-sm cursor-pointer px-2;
+}
+
+ul li img{
+  @apply w-8 h-10
+}
+
+@media (min-width: 1000px) {
+  .hero-container {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.hero-container::after {
+  content: "";
+  @apply h-[100vh] w-full bg-[#00000093] top-0 left-0 right-0 absolute z-0;
 }

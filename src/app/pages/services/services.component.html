@@ -1,1 +1,26 @@
-<p>services works!</p>
+<section class="bg-primary">
+  <h1 class="text-3xl text-white font-bold text-center mx-auto">
+    Our Services
+  </h1>
+
+  <div class="w-full flex flex-wrap mt-4">
+    @for (service of [1,2,3]; track $index) {
+    <div class="flex w-[20%]">
+      <h2 class="text-2xl text-white">PHYSICAL THERAPY</h2>
+      <hr class="bg-white w-full h-8" />
+      <img
+        src="/images/services/web.jpg"
+        alt=""
+        class="w-full h-52 rounded shadow-md m"
+      />
+
+      <div class="flex">
+        <h3 class="font-bold text-xl mb-2">Web Development</h3>
+        <p class="text-gray-700 text-base ml-8">
+          We offer custom web development services to build your business
+        </p>
+      </div>
+    </div>
+    }
+  </div>
+</section>

@@ -1,7 +1,52 @@
-<section className="h-screen">
-  <img
-    class="bg-cover w-full h-full"
-    src="/assets/images/orthopedic/senior-exercises-balance-ball.jpg"
-    alt=""
-  />
-</section>
+<header class="hero-container">
+  <div class="hero">
+    <div class="flex flex-col items-center justify-center pl-5 gap-5">
+      <h3 class="text-white text-xl font-bold uppercase">Caring for Life</h3>
+
+      <h1 class="text-white text-5xl text-center font-bold">
+        Leading the Way in Medical Excellence
+      </h1>
+
+      <sosinc-button
+        label="Our Services"
+        className="bg-primary hover:bg-blue-900 text-white hover:text-white py-4 px-5 duration-300"
+        link="/services"
+      />
+    </div>
+  </div>
+  <div
+    class="absolute bottom-[-6%] h-[5rem] w-full flex items-center justify-center z-[60]"
+  >
+    <ul class="hidden md:flex w-full h-full items-center justify-evenly gap-3">
+      <li>
+        <a routerLink="tel:+12340485303">
+          Call Us
+
+          <img class="bg-white" src="/assets/svgs/phone.svg" alt="Phone" />
+        </a>
+      </li>
+      <li>
+        <a routerLink="/appointment">
+          Make Appointment
+          <img
+            src="/assets/svgs/calendar.svg"
+            alt="Calender"
+            width="50"
+            height="50"
+          />
+        </a>
+      </li>
+      <li>
+        <a href="https://maps.app.goo.gl/c8ghPzKvT5FxjL1c8"
+          >See Our Location
+
+          <img
+            class="bg-white"
+            src="/assets/svgs/location.svg"
+            alt="Location"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>

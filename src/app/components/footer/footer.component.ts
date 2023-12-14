@@ -33,6 +33,8 @@ export class FooterComponent {
   importantLinks = signal<Array<LinkDto>>(ImportantLinks);
   contactLinks = signal<Array<LinkDto>>(ContactLinks);
   linkType = LinkType;
+  year: number = new Date().getFullYear();
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
