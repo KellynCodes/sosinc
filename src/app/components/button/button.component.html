@@ -1,8 +1,7 @@
 <a
   [class]="className"
-  (click)="navigate(link, fragment)"
-  routerLinkActive="active"
-  class="flex items-center justify-center px-5 py-3 rounded-md text-sm md:text-lg text-center transition-all cursor-pointer"
+  [routerLink]="link"
+  class="flex items-center justify-center px-5 py-3 rounded-lg text-sm md:text-lg text-center transition-all cursor-pointer"
 >
   {{ label }}
 </a>

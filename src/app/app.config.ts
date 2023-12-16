@@ -7,10 +7,15 @@ import {
 
 import { routes } from './app.routes';
 import { TemplatePageTitleStrategy } from './extensions/title.strategy';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideAnimations(),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
+    ),
     {
       provide: TitleStrategy,
       useClass: TemplatePageTitleStrategy,

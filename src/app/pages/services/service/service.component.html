@@ -1,0 +1,102 @@
+@if(service != null && service.id != "women-health"){
+
+<section
+  class="h-auto w-full flex gap-8 justify-center flex-col items-center mb-10"
+>
+  <div
+    class="img-container relative flex w-full h-32 justify-start items-center"
+  >
+    <img
+      class="absolute inset-0 bg-cover h-full mx-auto w-full object-cover z-0"
+      src="../../../../assets/images/orthopedic/hero.webp"
+      [alt]="service.name"
+    />
+    <h1
+      class="absolute top-6 left-4 z-[20] font-bold text-3xl md:text-6xl text-white"
+    >
+      {{ service.name }}
+    </h1>
+  </div>
+
+  <div
+    class="w-[100vw] bg-white mx-auto h-fit gap-4 flex flex-wrap items-center justify-between px-4"
+  >
+    <div
+      class="w-full h-[20rem] md:w-[45%] flex flex-col items-center justify-center gap-4 p-3"
+    >
+      <h1 class="text-3xl font-bold">{{ service.title }}</h1>
+
+      <h5 class="text-lg font-normal mt-8">{{ service.desc }}</h5>
+    </div>
+    <div class="h-[20rem] w-full md:w-[45%] p-3">
+      <img
+        class="object-contain md:object-cover w-full h-full"
+        [src]="service.image"
+        [alt]="service.title"
+      />
+    </div>
+  </div>
+
+  <!-- faq -->
+  <div
+    class="h-fit max-h-screen w-full mx-auto md:w-[80%] flex flex-wrap items-center justify-center gap-4 py-2"
+  >
+    <h1 class="my-2 text-4xl text-black text-center font-bold">
+      {{ service.subTitle }}
+    </h1>
+    <div class="flex flex-col w-[45%] h-full max-h-[20rem]">
+      <img
+        class="object-contain md:object-cover max-h-[20rem] w-full"
+        [src]="service.image"
+        [alt]="service.title"
+      />
+    </div>
+    @if(service.faqs != null){
+    <div class="flex flex-col w-[45%] max-h-[20rem] overflow-y-scroll p-6">
+      @for (faq of service.faqs; track faq.id) {
+      <mat-accordion
+        class="flex flex-col items-center justify-between gap-8 my-2"
+      >
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="">
+              <h2 class="text-white">
+                {{ faq.question }}
+              </h2>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="font-inter text-white">
+            {{ faq.answer }}
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      }
+    </div>
+    }
+  </div>
+  <div class="flex flex-col justify-center items-start w-full h-fit py-5">
+    <div
+      class="w-[50%] flex items-center justify-center mx-auto flex-col gap-3"
+    >
+      <h2 class="text-3xl font-bold uppercase text-black">
+        EXPERIENCE THE NATURAL HEALING POWER OF {{ service.name }}. BOOK YOUR
+        SESSION NOW AND SAY GOODBYE TO PAIN!
+      </h2>
+
+      <sosinc-button
+        label="Contact Us Now"
+        link="/contact"
+        className="bg-primary text-white rounded-lg py-3 px-3 mt-4"
+      />
+    </div>
+  </div>
+</section>
+}@else {@if (service != null && service.id == "women-health") {
+<sosinc-women-health />
+} @if (service == null) {
+<sosinc-no-item-found
+  navigationLink="/"
+  buttonLabel="Go back Home"
+  message="This service is not found"
+/>
+} }

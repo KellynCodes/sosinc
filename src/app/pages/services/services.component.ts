@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
+import { ServiceDto } from '../../../libs/types';
+import { ServiceData } from '../../../libs/data';
 
 @Component({
   selector: 'sosinc-services',
@@ -8,4 +10,6 @@ import { ButtonComponent } from '../../components/button/button.component';
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',
 })
-export class ServicesComponent {}
+export class ServicesComponent {
+  services: ServiceDto[] = ServiceData;
+}
