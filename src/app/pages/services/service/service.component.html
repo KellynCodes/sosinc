@@ -3,32 +3,19 @@
 <section
   class="h-auto w-full flex gap-8 justify-center flex-col items-center mb-10"
 >
-  <div
-    class="img-container relative flex w-full h-32 justify-start items-center"
-  >
-    <img
-      class="absolute inset-0 bg-cover h-full mx-auto w-full object-cover z-0"
-      src="../../../../assets/images/orthopedic/hero.webp"
-      [alt]="service.name"
-    />
-    <h1
-      class="absolute top-6 left-4 z-[20] font-bold text-3xl md:text-6xl text-white"
-    >
-      {{ service.name }}
-    </h1>
-  </div>
+  <sosinc-page-header [pageTitle]="service.name" />
 
   <div
     class="w-[100vw] bg-white mx-auto h-fit gap-4 flex flex-wrap items-center justify-between px-4"
   >
     <div
-      class="w-full h-[20rem] md:w-[45%] flex flex-col items-center justify-center gap-4 p-3"
+      class="w-full h-[20rem] md:w-[45%] flex flex-col items-center justify-center gap-4 p-3 shadow"
     >
-      <h1 class="text-3xl font-bold">{{ service.title }}</h1>
+      <h2 class="text-2xl md:text-4xl font-bold">{{ service.title }}</h2>
 
       <h5 class="text-lg font-normal mt-8">{{ service.desc }}</h5>
     </div>
-    <div class="h-[20rem] w-full md:w-[45%] p-3">
+    <div class="h-[20rem] w-full md:w-[45%] p-3 shadow">
       <img
         class="object-contain md:object-cover w-full h-full"
         [src]="service.image"
@@ -39,11 +26,11 @@
 
   <!-- faq -->
   <div
-    class="h-fit max-h-screen w-full mx-auto px-4 flex flex-col items-center justify-center"
+    class="h-fit max-h-screen w-full mx-auto px-4 flex flex-col items-center justify-center shadow"
   >
-    <h1 class="my-2 text-4xl text-black text-center font-bold">
+    <h3 class="my-2 text-xl md:text-3xl text-black text-center font-bold">
       {{ service.subTitle }}
-    </h1>
+    </h3>
     <div
       class="flex flex-wrap w-full h-auto items-center justify-center gap-4 py-3"
     >

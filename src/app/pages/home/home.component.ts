@@ -16,6 +16,5 @@ import { FaqsComponent } from '../../components/faqs/faqs.component';
     ServicesComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
 })
 export class HomeComponent {}
