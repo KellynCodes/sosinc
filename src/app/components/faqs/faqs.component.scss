@@ -1,0 +1,19 @@
+mat-panel-title{
+  background-color: #1F2B6C !important;
+  color: white  !important;
+}
+
+@media(max-width: 640px){
+ mat-expansion-panel-header{
+        height: 6rem !important;
+    }
+}
+
+mat-expansion-panel{
+  background-color: #1F2B6C !important;
+}
+
+mat-expansion-panel:hover{
+  background-color: #082098;
+  color: white;
+}

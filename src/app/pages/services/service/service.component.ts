@@ -2,11 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceDto } from '../../../../libs/types';
 import { ServiceData } from '../../../../libs/data';
-import { MatAccordion } from '@angular/material/expansion';
 import { MaterialModule } from '../../../../design/material.module';
 import { NoItemFoundComponent } from '../../../components/no-item-found/no-item-found.component';
-import { WomenHealthComponent } from '../women-health/women-health.component';
 import { ButtonComponent } from '../../../components/button/button.component';
+import { CtaComponent } from '../../../components/cta/cta.component';
 
 @Component({
   selector: 'sosinc-service',
@@ -14,8 +13,8 @@ import { ButtonComponent } from '../../../components/button/button.component';
   imports: [
     MaterialModule,
     NoItemFoundComponent,
+    CtaComponent,
     ButtonComponent,
-    WomenHealthComponent,
   ],
   templateUrl: './service.component.html',
   styleUrl: './service.component.scss',

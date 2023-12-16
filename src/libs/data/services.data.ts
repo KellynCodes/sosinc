@@ -1,5 +1,8 @@
-import { ServiceDto } from '../types';
 import { MassageFaqData } from './massage.faq';
+import { PhysicalTherapyFaqData } from './physical-therapy.faq';
+import { ServiceDto } from '../types';
+import { MyOfascialFaqData } from './myoffascia.faq';
+import { WomenHealthFaqData } from './women-health.faq';
 
 export const ServiceData: ServiceDto[] = [
   {
@@ -9,7 +12,7 @@ export const ServiceData: ServiceDto[] = [
     name: 'MYOFASCIAL RELEASE',
     desc: 'Myofascial release is a hands-on therapeutic technique meticulously crafted to alleviate tension within both the muscles and the fascia, spanning the entirety of the body.',
     image: '/assets/images/services/myofascial-release.jpeg',
-    faqs: MassageFaqData,
+    faqs: MyOfascialFaqData,
   },
 
   {
@@ -28,6 +31,7 @@ export const ServiceData: ServiceDto[] = [
     name: "WOMEN'S HEALTH",
     desc: "Our specialized approach to women's health encompasses orthopedic care tailored to address musculoskeletal issues, ensuring a holistic and patient-centered experience.",
     image: '../../assets/images/services/women-health.jpeg',
+    faqs: WomenHealthFaqData,
   },
   {
     id: 'physical-therapy',
@@ -36,5 +40,6 @@ export const ServiceData: ServiceDto[] = [
     name: 'PHYSICAL THERAPY',
     desc: 'Our expert team employs evidence-based practices to enhance your mobility, strength, and endurance, providing personalized care that focuses on restoring function and managing pain',
     image: '../../assets/images/services/physical-therapy.jpg',
+    faqs: PhysicalTherapyFaqData,
   },
 ];

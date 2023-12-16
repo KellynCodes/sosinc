@@ -1,8 +1,9 @@
 .hero-container {
-  @apply bg-transparent relative flex items-center justify-around min-h-screen w-full h-fit lg:h-[80vh] object-cover z-0;
+  @apply bg-transparent relative flex items-center justify-around min-h-screen w-full h-fit lg:h-[80vh] z-0;
   background-image: url("../../../assets/images/orthopedic/hero.jpeg");
   background-repeat: no-repeat;
   background-position:  center;
+  background-size: cover;
 }
 
 .hero-container .hero{
@@ -17,12 +18,6 @@ ul li img{
   @apply w-8 h-10;
 }
 
-@media (min-width: 1000px) {
-  .hero-container {
-    background-position: center;
-    background-size: cover;
-  }
-}
 
 .hero-container::after {
   content: "";
