@@ -3,7 +3,10 @@
 <section
   class="h-auto w-full flex gap-8 justify-center flex-col items-center mb-10"
 >
-  <sosinc-page-header [pageTitle]="service.name" />
+  <sosinc-page-header
+    page="Service / {{ service.name }}"
+    [pageTitle]="service.name"
+  />
 
   <div
     class="w-[100vw] bg-white mx-auto h-fit gap-4 flex flex-wrap items-center justify-between px-4"
