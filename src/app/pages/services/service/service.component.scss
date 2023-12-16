@@ -1,0 +1,18 @@
+section .img-container::after{
+  content: "";
+  @apply h-32 w-[100vw] bg-[#000000a7] top-0 left-0 right-0 absolute z-0;
+}
+
+mat-panel-title{
+  background-color: #1F2B6C !important;
+  color: white  !important;
+}
+
+mat-expansion-panel{
+  background-color: #1F2B6C !important;
+}
+
+mat-expansion-panel:hover{
+  background-color: #082098;
+  color: white;
+}
