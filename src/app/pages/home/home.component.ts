@@ -1,9 +1,9 @@
-import { CtaComponent } from './../../components/cta/cta.component';
+import { CtaComponent } from '../../components/cta/cta.component';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from '../hero/hero.component';
-import { ServicesComponent } from '../services/services.component';
 import { FaqsComponent } from '../../components/faqs/faqs.component';
+import { GenericServiceComponent } from '../../components/generic-service/generic-service.component';
 
 @Component({
   selector: 'sosinc-home',
@@ -13,7 +13,7 @@ import { FaqsComponent } from '../../components/faqs/faqs.component';
     HeroComponent,
     CtaComponent,
     FaqsComponent,
-    ServicesComponent,
+    GenericServiceComponent,
   ],
   templateUrl: './home.component.html',
 })

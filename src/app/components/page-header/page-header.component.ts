@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PageHeaderComponent {
   @Input({ required: true }) pageTitle: string = '';
+  @Input({ required: true }) page: string = '';
 }
