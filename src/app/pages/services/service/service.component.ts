@@ -6,6 +6,7 @@ import { MaterialModule } from '../../../../design/material.module';
 import { NoItemFoundComponent } from '../../../components/no-item-found/no-item-found.component';
 import { ButtonComponent } from '../../../components/button/button.component';
 import { CtaComponent } from '../../../components/cta/cta.component';
+import { PageHeaderComponent } from '../../../components/page-header/page-header.component';
 
 @Component({
   selector: 'sosinc-service',
@@ -15,6 +16,7 @@ import { CtaComponent } from '../../../components/cta/cta.component';
     NoItemFoundComponent,
     CtaComponent,
     ButtonComponent,
+    PageHeaderComponent,
   ],
   templateUrl: './service.component.html',
   styleUrl: './service.component.scss',

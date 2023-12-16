@@ -1,0 +1,4 @@
+.img-container::after{
+  content: "";
+  @apply h-full w-[100vw] bg-[#000000a7] top-0 left-0 right-0 absolute z-0;
+}

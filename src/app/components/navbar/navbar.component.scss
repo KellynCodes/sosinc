@@ -8,10 +8,9 @@
 
   @media(max-width: 768px){
       .navbar{
-          @apply absolute w-[50vw] h-[80vh] bg-primary flex-col gap-5 right-0 top-[13.5%];
+          @apply fixed w-[50vw] h-[80vh] bg-primary flex-col gap-5 right-0 top-[10%] md:top-[13.5%];
         }
         
-             
         .navbar.close{
             @apply hidden;
         }
