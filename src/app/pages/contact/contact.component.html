@@ -14,7 +14,7 @@
   </div>
 
   <div
-    class="w-full h-screen flex flex-wrap items-center justify-between gap-x-[2%] my-8 px-4 shadow"
+    class="w-full h-auto lg:h-screen flex flex-wrap items-center justify-between gap-x-[2%] my-8 px-4 shadow"
   >
     <form
       class="w-full md:w-[48%] h-full flex flex-col items-center justify-center gap-y-5"
@@ -87,7 +87,7 @@
         <p>Message cannot be less than 100 characters.</p>
         }
         <button
-          class="w-full rounded-b-lg h-14 bg-accent text-primary capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all cursor-pointer outline-none border-none"
+          class="w-full rounded-b-lg h-14 bg-accent text-primary hover:bg-primary hover:border-t hover:border-t-white hover:text-white capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all cursor-pointer outline-none border-r-0 border-b-0 border-l-0"
           type="submit"
         >
           {{ isSending() ? "Sending..." : "Send" }}
@@ -96,18 +96,14 @@
     </form>
 
     <div
-      class="w-full md:w-[48%] flex flex-wrap items-center justify-center py-2 px-3 gap-4"
+      class="w-full h-auto md:w-[48%] flex flex-wrap items-center justify-center py-2 px-3 gap-4"
     >
-      <div
-        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
-      >
+      <div class="animae">
         <img class="mb-4" src="/assets/svgs/phone.svg" alt="phone" />
         <h5>(237) 681-812-255</h5>
         <h5>(237) 666-331-894</h5>
       </div>
-      <div
-        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
-      >
+      <div class="animae">
         <img class="'mb-4" src="/assets/svgs/location.svg" alt="Our Location" />
         <h2>Location</h2>
         <a
@@ -118,17 +114,13 @@
           CA, 95687
         </a>
       </div>
-      <div
-        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
-      >
+      <div class="animae">
         <img src="/assets/svgs/email.svg" alt="Our contact email" />
         <h2>Email</h2>
         <h5>fildineeesoe&commat;gmil.com</h5>
         <h5>myebstudios&commat;gmail.com</h5>
       </div>
-      <div
-        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
-      >
+      <div class="animae">
         <img
           class="mb-4"
           src="/assets/svgs/working-hour.svg"
