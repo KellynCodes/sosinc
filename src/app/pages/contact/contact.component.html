@@ -78,7 +78,7 @@
           id="message"
           formControlName="message"
           cols="30"
-          rows="10"
+          rows="9"
           placeholder="Write Your Message"
         ></textarea>
         @if(isInputValid('message', "required")){
@@ -100,8 +100,8 @@
     >
       <div class="animae">
         <img class="mb-4" src="/assets/svgs/phone.svg" alt="phone" />
-        <h5>(237) 681-812-255</h5>
-        <h5>(237) 666-331-894</h5>
+        <p>(237) 681-812-255</p>
+        <p>(237) 666-331-894</p>
       </div>
       <div class="animae">
         <img class="'mb-4" src="/assets/svgs/location.svg" alt="Our Location" />
@@ -127,9 +127,15 @@
           alt="Our Working hour"
         />
         <h2>Working Hour</h2>
-        <h5>Mon-Sat 09:00-20:00</h5>
-        <h5>Sunday Emergency only</h5>
+        <p>Mon-Sat 09:00-20:00</p>
+        <p>Sunday Emergency only</p>
       </div>
     </div>
   </div>
+
+  <sosinc-faqs />
+  <hr class="h-[2px] bg-primary w-full" />
+  <sosinc-cta
+    serviceName="physical therapy, women's health, therapeutic massage and myofascial release"
+  />
 </div>

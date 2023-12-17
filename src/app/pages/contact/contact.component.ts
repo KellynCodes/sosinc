@@ -7,12 +7,14 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { PageHeaderComponent } from '../../components/page-header/page-header.component';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { HttpStatusCode } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
-import { MatError } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import {
+  CtaComponent,
+  FaqsComponent,
+  PageHeaderComponent,
+} from '../../components';
 
 @Component({
   selector: 'sosinc-contact',
@@ -22,6 +24,8 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     FormsModule,
     PageHeaderComponent,
+    FaqsComponent,
+    CtaComponent,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',

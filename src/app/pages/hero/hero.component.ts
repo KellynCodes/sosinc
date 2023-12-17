@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../../components/button/button.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ButtonComponent } from '../../components';
 
 @Component({
   selector: 'sosinc-hero',

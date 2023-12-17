@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GenericServiceComponent } from '../../components/generic-service/generic-service.component';
+import { GenericServiceComponent } from '../../components';
 
 @Component({
   selector: 'sosinc-services',
