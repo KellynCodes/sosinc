@@ -1,3 +1,143 @@
-<div class="h-screen w-screen">
+<div class="h-auto w-screen">
   <sosinc-page-header page="Contact" pageTitle="Contact Us" />
+
+  <div
+    class="w-full md:w-[80%] h-[28rem] mx-auto my-4 flex items-center justify-center shadow-lg rounded"
+  >
+    <iframe
+      class="w-full h-full"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3128.7602120199176!2d-121.95495192496564!3d38.35453167184501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80853d21785345ad%3A0xf2b3fdb8452148d1!2s1010%20Nut%20Tree%20Rd%2C%20Vacaville%2C%20CA%2095687%2C%20USA!5e0!3m2!1sen!2sng!4v1702759895460!5m2!1sen!2sng"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <div
+    class="w-full h-screen flex flex-wrap items-center justify-between gap-x-[2%] my-8 px-4 shadow"
+  >
+    <form
+      class="w-full md:w-[48%] h-full flex flex-col items-center justify-center gap-y-5"
+      (ngSubmit)="onSubmit()"
+      [formGroup]="contactForm"
+    >
+      <div class="w-full flex flex-col items-start justify-start gap-y-2">
+        <h1 class="text-secondary font-bold text-2xl capitalize">
+          Get In Touch
+        </h1>
+        <h2 class="text-primary font-semibold text-xl capitalize mt-2">
+          Contact Us
+        </h2>
+      </div>
+
+      <div
+        class="flex flex-col rounded-lg bg-primary items-center justify-center w-full h-fit p-y-0"
+      >
+        <div
+          class="w-full h-14 flex items-center justify-center border-b-2 border-white"
+        >
+          <input
+            class="w-[50%] rounded-tl-lg border-b-0 border-r border-r-white placeholder:text-white"
+            type="name"
+            placeholder="Enter Your Name"
+            formControlName="name"
+            name="name"
+            id="name"
+          />
+          <input
+            class="w-[50%] rounded-tr-lg border-b-0 placeholder:text-white"
+            type="email"
+            placeholder="Enter Your Email"
+            formControlName="email"
+            name="email"
+            id="email"
+          />
+        </div>
+        <div class="flex items-center gap-4 justify-between">
+          @if(isInputValid('email', 'required')){
+          <p>Email is required.</p>
+          }@if (isInputValid('email','email')) {
+          <p>Please enter a valid email address.</p>
+          } @if (isInputValid('name', 'required')) {
+          <p>Name is required.</p>
+          }
+        </div>
+        <input
+          class="w-full border-b border-b-white placeholder:text-white"
+          type="text"
+          placeholder="Enter Your Number (Optional)"
+          formControlName="phone"
+          name="phone"
+          id="phone"
+        />
+        @if(isInputValid('phone','pattern')){
+        <p>Please enter a valid phone number.</p>
+        }
+        <textarea
+          class="w-full border-none outline-none text-white pl-4 mt-4 bg-primary placeholder:text-white"
+          id="message"
+          formControlName="message"
+          cols="30"
+          rows="10"
+          placeholder="Write Your Message"
+        ></textarea>
+        @if(isInputValid('message', "required")){
+        <p>Message is required.</p>
+        }@if (isInputValid('message', 'minlength')) {
+        <p>Message cannot be less than 100 characters.</p>
+        }
+        <button
+          class="w-full rounded-b-lg h-14 bg-accent text-primary capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all cursor-pointer outline-none border-none"
+          type="submit"
+        >
+          {{ isSending() ? "Sending..." : "Send" }}
+        </button>
+      </div>
+    </form>
+
+    <div
+      class="w-full md:w-[48%] flex flex-wrap items-center justify-center py-2 px-3 gap-4"
+    >
+      <div
+        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
+      >
+        <img class="mb-4" src="/assets/svgs/phone.svg" alt="phone" />
+        <h5>(237) 681-812-255</h5>
+        <h5>(237) 666-331-894</h5>
+      </div>
+      <div
+        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
+      >
+        <img class="'mb-4" src="/assets/svgs/location.svg" alt="Our Location" />
+        <h2>Location</h2>
+        <a
+          class="text-sm font-normal"
+          href="https://maps.app.goo.gl/c8ghPzKvT5FxjL1c8"
+        >
+          Specialized Orthopedic Surgeons, INC. 1010 Nut Tree Road, Vacaville,
+          CA, 95687
+        </a>
+      </div>
+      <div
+        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
+      >
+        <img src="/assets/svgs/email.svg" alt="Our contact email" />
+        <h2>Email</h2>
+        <h5>fildineeesoe&commat;gmil.com</h5>
+        <h5>myebstudios&commat;gmail.com</h5>
+      </div>
+      <div
+        class="animae w-[14.5625rem] h-[14.5625rem] flex flex-col items-center justify-center p-4"
+      >
+        <img
+          class="mb-4"
+          src="/assets/svgs/working-hour.svg"
+          alt="Our Working hour"
+        />
+        <h2>Working Hour</h2>
+        <h5>Mon-Sat 09:00-20:00</h5>
+        <h5>Sunday Emergency only</h5>
+      </div>
+    </div>
+  </div>
 </div>

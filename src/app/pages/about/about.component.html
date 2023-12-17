@@ -2,16 +2,20 @@
   <sosinc-page-header page="About" pageTitle="About" />
 
   <div
-    class="w-full h-auto py-6 lg:h-[25rem] flex flex-wrap p-4 gap-[2%] mx-auto"
+    class="w-full h-auto py-6 lg:h-[30rem] flex flex-wrap p-4 gap-[2%] mx-auto"
   >
     <div
       class="w-full h-full md:w-[48%] flex flex-col items-center justify-center gap-[2%] shadow rounded"
     >
       <div class="flex flex-col px-6">
-        <h1 class="text-xl font-bold text-center">About us</h1>
+        <h1 class="text-xl font-bold text-center">Who We Are</h1>
         <p class="text-lg font-normal">
-          SOSInc. is a company that specializes in providing software solutions
-          for various industries, including but not limited to:
+          Welcome to Specialized Orthopedic Surgeons, where a team of highly
+          skilled and compassionate orthopedic specialists is dedicated to
+          delivering exceptional care. Our commitment to excellence in
+          diagnosing, treating, and rehabilitating musculoskeletal conditions
+          ensures that each patient receives personalized treatment with ultra
+          modern medical equipments.
         </p>
       </div>
       <div class="flex flex-col justify-center items-center mt-4 px-2">
@@ -36,23 +40,15 @@
       class="mt-8 md:mt-0 w-full bg-primary h-full md:w-[48%] flex flex-col items-center justify-center shadow rounded"
     >
       <img
-        src="/assets/images/about.jpeg"
+        src="/assets/images/about.jpg"
         alt="About Us"
         class="bg-cover w-full h-full"
       />
     </div>
   </div>
 
-  <div class="w-full h-auto flex flex-col items-center justify-center px-4">
-    <h1 class="text-3xl font-bold text-center">
-      FREQUENTLY ADDRESSED CONDITIONS
-    </h1>
-
-    <div
-      class="w-[48%] h-full flex flex-col items-center justify-center gap-y-4 shadow"
-    ></div>
-    <div
-      class="w-[48%] h-full flex flex-col items-center justify-center gap-y-4 shadow"
-    ></div>
-  </div>
+  <sosinc-faqs />
+  <sosinc-cta
+    serviceName="physical therapy, women's health, therapeutic massage and myofascial release and more"
+  />
 </section>
