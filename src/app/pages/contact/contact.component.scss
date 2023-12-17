@@ -1,0 +1,39 @@
+form input{
+    @apply h-14 border-l-0  border-t-0 outline-none bg-primary text-white placeholder:text-white px-4;
+}
+
+form p{
+    @apply text-sm text-red-600 font-normal text-center;
+}
+
+.animae{
+    @apply bg-accent cursor-pointer transition-all duration-500 rounded-md; 
+}
+
+.animae:hover{
+    @apply bg-primary;
+}
+
+.animae h2{
+    @apply text-[1.125rem] font-bold uppercase;
+}
+
+.animae h2, a, h5{
+    @apply text-primary duration-500 transition-all;
+}
+
+.animae:hover a {
+    color:  white;
+}
+
+.animae img{
+    @apply text-primary;
+}
+
+.animae:hover h2, h5{
+    color: white;
+}
+
+.animae:hover img{
+    background-color: white;
+}
