@@ -15,11 +15,11 @@ form p{
 }
 
 .animae h2{
-    @apply text-[1.125rem] font-bold uppercase;
+    @apply text-sm md:text-lg font-bold uppercase;
 }
 
-.animae h2, a, h5{
-    @apply text-primary duration-500 transition-all;
+.animae h2, p a, h5{
+    @apply text-sm md:text-lg text-primary duration-500 transition-all;
 }
 
 .animae:hover a {
