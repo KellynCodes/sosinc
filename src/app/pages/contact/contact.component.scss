@@ -7,7 +7,7 @@ form p{
 }
 
 .animae{
-    @apply bg-accent cursor-pointer transition-all duration-500 rounded-md w-full lg:w-[48%] h-[14.5625rem] flex flex-col items-center justify-center p-4; 
+    @apply bg-accent cursor-pointer transition-all duration-500 rounded-md w-[45%] md:w-full lg:w-[48%] h-[14.5625rem] flex flex-col items-center justify-center p-4; 
 }
 
 .animae:hover{

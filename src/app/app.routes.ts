@@ -8,8 +8,7 @@ import { AppointmentComponent } from './pages/appointment/appointment.component'
 import { ServiceComponent } from './pages/services/service/service.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent, title: 'Home' },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', component: HomeComponent, title: 'Home' },
   { path: 'about', component: AboutComponent, title: 'About Us' },
   { path: 'contact', component: ContactComponent, title: 'Contact Us' },
   { path: 'services', component: ServicesComponent, title: 'Services' },
