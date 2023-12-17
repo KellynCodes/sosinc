@@ -10,26 +10,31 @@
     }
 
     <div
-      class="w-full h-fit flex items-center justify-center gap-2 flex-wrap m-4 px-2"
+      class="max-w-screen-lg h-fit flex items-center justify-center gap-2 flex-wrap m-4 px-2"
     >
       @for (service of services; track service.id) {
       <div
-        class="border border-white flex items-center h-[33rem] rounded-md justify-between w-full sm:w-[48%] lg:w-[25%] flex-col pb-6"
+        class="border border-white flex items-center h-[33rem] rounded-md justify-between w-[98%] sm:w-[48%] lg:w-[30%] flex-col pb-6"
       >
         <img
           [class]="service.id == 'therapeutic-massage' ? 'object-cover' : ''"
           [src]="service.image"
           [alt]="service.name"
-          class="w-full md:h-52 max-h-56 max-w-[12rem] rounded shadow-md"
+          class="w-full md:h-52 max-h-56 rounded shadow-md"
         />
         <div
           class="w-full h-fit flex flex-col items-center justify-center gap-y-4 px-4 md:px-2 mt-4"
         >
-          <h2 class="text-2xl text-white capitalize">{{ service.name }}</h2>
+          <h2 class="text-lg md:text-2xl text-white capitalize">
+            {{ service.name }}
+          </h2>
           <hr class="bg-white w-full h-1" />
 
           <div class="flex flex-col gap-3">
-            <p class="text-white text-base">
+            <p
+              [class]="service.id == 'therapeutic-massage' ? 'text-sm' : ''"
+              class="text-white text-base"
+            >
               {{ service.desc }}
             </p>
           </div>
