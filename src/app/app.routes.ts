@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { NotfoundComponent } from './components/notfound/notfound.component';
-import { ServicesComponent } from './pages/services/services.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { AppointmentComponent } from './pages/appointment/appointment.component';
-import { ServiceComponent } from './pages/services/service/service.component';
-
+import {
+  AboutComponent,
+  AppointmentComponent,
+  ContactComponent,
+  HomeComponent,
+  ServiceComponent,
+  ServicesComponent,
+} from './pages';
+import { NotfoundComponent } from './components';
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Home' },
   { path: 'about', component: AboutComponent, title: 'About Us' },

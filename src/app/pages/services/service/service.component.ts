@@ -3,10 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ServiceDto } from '../../../../libs/types';
 import { ServiceData } from '../../../../libs/data';
 import { MaterialModule } from '../../../../design/material.module';
-import { NoItemFoundComponent } from '../../../components/no-item-found/no-item-found.component';
-import { ButtonComponent } from '../../../components/button/button.component';
-import { CtaComponent } from '../../../components/cta/cta.component';
-import { PageHeaderComponent } from '../../../components/page-header/page-header.component';
+import {
+  ButtonComponent,
+  CtaComponent,
+  NoItemFoundComponent,
+  PageHeaderComponent,
+} from '../../../components';
 
 @Component({
   selector: 'sosinc-service',

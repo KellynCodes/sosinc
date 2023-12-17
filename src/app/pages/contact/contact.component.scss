@@ -18,21 +18,18 @@ form p{
     @apply text-sm md:text-lg font-bold uppercase;
 }
 
-.animae h2, p a, h5{
+.animae h2, p, a, h5{
     @apply text-sm md:text-lg text-primary duration-500 transition-all;
 }
 
-.animae:hover a {
-    color:  white;
+.animae:hover h2, a, p, h5{
+    color: white;
 }
 
 .animae img{
     @apply text-primary;
 }
 
-.animae:hover h2, h5{
-    color: white;
-}
 
 .animae:hover img{
     background-color: white;

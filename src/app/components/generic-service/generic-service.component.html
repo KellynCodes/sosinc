@@ -1,5 +1,5 @@
 <div id="services" class="service-container {{ additionalClass }}">
-  <div class="felx flex-col items-center justify-center z-50">
+  <div class="flex flex-col items-center justify-center z-50">
     @if(useHeaderView){
     <sosinc-page-header page="Services" pageTitle="Our Services" />
     }@else {
@@ -10,7 +10,7 @@
     }
 
     <div
-      class="max-w-screen-lg h-fit flex items-center justify-center gap-2 flex-wrap m-4 px-2"
+      class="w-screen h-fit flex items-center justify-center gap-2 flex-wrap m-4 px-2"
     >
       @for (service of services; track service.id) {
       <div
@@ -49,3 +49,8 @@
     </div>
   </div>
 </div>
+<sosinc-faqs />
+<hr class="h-[1.5px] bg-primary w-full" />
+<sosinc-cta
+  serviceName="physical therapy, women's health, therapeutic massage and myofascial release"
+/>

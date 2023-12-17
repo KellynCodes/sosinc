@@ -1,3 +1,90 @@
-<div class="w-screen h-screen">
+<div class="w-screen h-auto">
   <sosinc-page-header page="Appointment" pageTitle="Make Your Appointment" />
+
+  <div class="w-full h-fit flex items-center justify-center p-4 shadow">
+    <div
+      class="w-[48%] h-auto flex flex-col items-center justify-between gap-y-4"
+    >
+      <div class="w-full flex flex-col items-start justify-start gap-y-4">
+        <h1 class="font-bold text-3xl">Book Your Appointment</h1>
+        <p class="text-base mt-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          possimus consequuntur alias quis nam id delectus dolorum commodi
+          tenetur impedit iste fugit earum excepturi quae, sit quidem ut soluta
+          deserunt.
+        </p>
+      </div>
+
+      <form
+        class="w-full h-full flex flex-col items-center justify-center gap-y-5"
+        (ngSubmit)="onSubmit()"
+        [formGroup]="appointmentForm"
+      >
+        <div
+          class="flex flex-col rounded-lg bg-primary items-center justify-center w-full h-fit p-y-0"
+        >
+          <div
+            class="w-full h-14 flex items-center justify-center border-b-2 border-white"
+          >
+            <input
+              class="w-[50%] rounded-tl-lg border-b-0 border-r border-r-white placeholder:text-white"
+              type="name"
+              placeholder="Enter Your Name"
+              formControlName="name"
+              name="name"
+              id="name"
+            />
+            <input
+              class="w-[50%] rounded-tr-lg border-b-0 placeholder:text-white"
+              type="email"
+              placeholder="Enter Your Email"
+              formControlName="email"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div class="flex items-center gap-4 justify-between">
+            @if(isInputValid('email', 'required')){
+            <p>Email is required.</p>
+            }@if (isInputValid('email','email')) {
+            <p>Please enter a valid email address.</p>
+            } @if (isInputValid('name', 'required')) {
+            <p>Name is required.</p>
+            }
+          </div>
+          <input
+            class="w-full border-b border-b-white placeholder:text-white"
+            type="text"
+            placeholder="Enter Your Number (Optional)"
+            formControlName="phone"
+            name="phone"
+            id="phone"
+          />
+          @if(isInputValid('phone','pattern')){
+          <p>Please enter a valid phone number.</p>
+          }
+          <textarea
+            class="w-full border-none outline-none text-white pl-4 mt-4 bg-primary placeholder:text-white"
+            id="message"
+            formControlName="message"
+            cols="30"
+            rows="9"
+            placeholder="Write Your Message"
+          ></textarea>
+          @if(isInputValid('message', "required")){
+          <p>Message is required.</p>
+          }@if (isInputValid('message', 'minlength')) {
+          <p>Message cannot be less than 100 characters.</p>
+          }
+          <button
+            class="w-full rounded-b-lg h-14 bg-accent text-primary hover:bg-primary hover:border-t hover:border-t-white hover:text-white capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all cursor-pointer outline-none border-r-0 border-b-0 border-l-0"
+            type="submit"
+          >
+            {{ isSending() ? "Sending..." : "Send" }}
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="w-[48%] h-full shadow flex items-center justify-center"></div>
+  </div>
 </div>
