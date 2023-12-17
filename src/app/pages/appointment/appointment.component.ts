@@ -10,6 +10,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { ServiceDto } from '../../../libs/types';
+import { ServiceData } from '../../../libs/data';
 
 @Component({
   selector: 'sosinc-appointment',
@@ -21,15 +23,18 @@ import { ToastrService } from 'ngx-toastr';
 export class AppointmentComponent {
   public appointmentForm!: FormGroup;
   public isSending = signal<boolean>(false);
+  public services = signal<ServiceDto[]>(ServiceData);
 
   constructor(private fb: FormBuilder, private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.appointmentForm = this.fb.group({
       name: ['', Validators.required],
+      gender: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.pattern('^\\+(?:[0-9] ?){6,14}[0-9]$')]],
       date: [new Date().toDateString(), Validators.required],
+      department: ['', Validators.required],
       message: ['', Validators.required],
     });
   }

@@ -3,11 +3,11 @@
 
   <div class="w-full h-fit flex items-center justify-center p-4 shadow">
     <div
-      class="w-[48%] h-auto flex flex-col items-center justify-between gap-y-4"
+      class="w-full md:w-[48%] h-auto flex flex-col items-center justify-between gap-y-4"
     >
       <div class="w-full flex flex-col items-start justify-start gap-y-4">
         <h1 class="font-bold text-3xl">Book Your Appointment</h1>
-        <p class="text-base mt-2">
+        <p class="text-base text-black mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
           possimus consequuntur alias quis nam id delectus dolorum commodi
           tenetur impedit iste fugit earum excepturi quae, sit quidem ut soluta
@@ -34,13 +34,42 @@
               name="name"
               id="name"
             />
-            <input
+            <select
               class="w-[50%] rounded-tr-lg border-b-0 placeholder:text-white"
+              formControlName="gender"
+              name="gender"
+              id="gender"
+            >
+              <option value="Gender">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div class="flex items-center gap-4 justify-between">
+            @if (isInputValid('name', 'required')) {
+            <p>Name is required.</p>
+            } @if(isInputValid('gender', 'required')){
+            <p>Gender is required.</p>
+            }
+          </div>
+          <div
+            class="w-full h-14 flex items-center justify-center border-b-2 border-white"
+          >
+            <input
+              class="w-[50%] rounded-tl-lg border-b-0 border-r border-r-white placeholder:text-white"
               type="email"
-              placeholder="Enter Your Email"
+              placeholder="example@gmail.com"
               formControlName="email"
               name="email"
               id="email"
+            />
+            <input
+              class="w-[50%] rounded-tr-lg border-b-0 placeholder:text-white"
+              type="text"
+              placeholder="+140348020843"
+              formControlName="phone"
+              name="phone"
+              id="phone"
             />
           </div>
           <div class="flex items-center gap-4 justify-between">
@@ -48,20 +77,23 @@
             <p>Email is required.</p>
             }@if (isInputValid('email','email')) {
             <p>Please enter a valid email address.</p>
-            } @if (isInputValid('name', 'required')) {
-            <p>Name is required.</p>
+            } @if (isInputValid('phone', 'pattern')) {
+            <p>Please enter a valid phone number.</p>
             }
           </div>
-          <input
+          <select
             class="w-full border-b border-b-white placeholder:text-white"
-            type="text"
-            placeholder="Enter Your Number (Optional)"
-            formControlName="phone"
-            name="phone"
-            id="phone"
-          />
-          @if(isInputValid('phone','pattern')){
-          <p>Please enter a valid phone number.</p>
+            formControlName="department"
+            name="department"
+            id="department"
+          >
+            <option value="">Department</option>
+            @for (service of services(); track service.id) {
+            <option value="{{ service.id }}">{{ service.name }}</option>
+            }
+          </select>
+          @if(isInputValid('department','required')){
+          <p>Department is required.</p>
           }
           <textarea
             class="w-full border-none outline-none text-white pl-4 mt-4 bg-primary placeholder:text-white"
@@ -85,6 +117,8 @@
         </div>
       </form>
     </div>
-    <div class="w-[48%] h-full shadow flex items-center justify-center"></div>
+    <div
+      class="w-full md:w-[48%] h-full shadow flex items-center justify-center"
+    ></div>
   </div>
 </div>
