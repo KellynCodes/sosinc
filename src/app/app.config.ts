@@ -18,7 +18,6 @@ export const appConfig: ApplicationConfig = {
       autoDismiss: true,
       timeOut: 3000,
       positionClass: 'toast-top-center',
-      preventDuplicates: true,
     }),
     provideRouter(
       routes,

@@ -57,13 +57,13 @@ export class AppointmentComponent {
     try {
       this.isSending.set(true);
       const response = await emailjs.send(
-        'service_angzgfi',
-        'template_em27ivs',
+        'service_qzft4dg',
+        'template_10esckf',
         {
-          to_name: 'there',
+          to_name: 'Specialized Orthopedic Surgeons',
           ...this.appointmentForm.value,
         },
-        'qivBRNuQUCrknS0_k'
+        'S8QJQci9NComKenmu'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending.set(false);
@@ -74,8 +74,18 @@ export class AppointmentComponent {
       }
       if (response.status == HttpStatusCode.Ok) {
         this.isSending.set(false);
-        this.toastr.success('We have received your message.');
-        this.appointmentForm.reset();
+        this.toastr.success(
+          `We have received your message ${this.appointmentForm.value.name}. Thanks for contacting us.`
+        );
+        this.appointmentForm.reset({
+          name: '',
+          email: '',
+          phone: '',
+          date: new Date().toDateString(),
+          message: '',
+          gender: '',
+          department: '',
+        });
         return;
       }
     } catch (error: any) {

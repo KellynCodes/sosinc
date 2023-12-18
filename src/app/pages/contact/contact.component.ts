@@ -64,13 +64,13 @@ export class ContactComponent {
     try {
       this.isSending.set(true);
       const response = await emailjs.send(
-        'service_angzgfi',
-        'template_em27ivs',
+        'service_qzft4dg',
+        'template_ojn12rc',
         {
-          to_name: 'there',
+          to_name: 'Specialized Orthopedic Surgeons',
           ...this.contactForm.value,
         },
-        'qivBRNuQUCrknS0_k'
+        'S8QJQci9NComKenmu'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending.set(false);
@@ -81,8 +81,16 @@ export class ContactComponent {
       }
       if (response.status == HttpStatusCode.Ok) {
         this.isSending.set(false);
-        this.toastr.success('We have received your message.');
-        this.contactForm.reset();
+        this.toastr.success(
+          `We have received your message ${this.contactForm.value.name}. Thanks for contacting us.`
+        );
+        this.contactForm.reset({
+          name: '',
+          email: '',
+          date: new Date().toDateString(),
+          phone: '',
+          message: '',
+        });
         return;
       }
     } catch (error: any) {
