@@ -59,8 +59,8 @@ export const ContactLinks: LinkDto[] = [
   {
     id: 2,
     type: LinkType.href,
-    url: 'mailto:fildineesoe@gmail.com',
-    linkText: 'Email: fildineesoe@gmail.com',
+    url: 'mailto:info@specializedorthosurgeons.com',
+    linkText: 'Email: info@specializedorthosurgeons.com',
   },
   {
     id: 3,
