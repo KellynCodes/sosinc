@@ -10,3 +10,54 @@ form p{
     @apply text-sm text-red-600 font-normal text-center;
 }
 
+
+.animae{
+    @apply bg-accent cursor-pointer transition-all duration-500 rounded-md w-[48%] md:w-full lg:w-[48%] h-[14.5625rem] flex flex-col items-center justify-center p-4; 
+}
+
+
+.animae:hover{
+    @apply bg-primary;
+}
+
+.animae h2{
+    @apply text-sm md:text-lg font-bold uppercase;
+}
+
+.animae h2, p, h5{
+    @apply text-sm md:text-lg text-primary duration-500 transition-all;
+}
+
+.animae h2, p, a, h5{
+    @apply text-primary;
+}
+
+.animae a{
+     @apply my-4;
+}
+
+
+.animae:hover h2 {
+    color: white;
+}
+
+.animae:hover a{
+      color: white;
+}
+
+.animae:hover  p{
+  color: white;
+}
+
+.animae:hover h5{
+  color: white;
+}
+
+.animae img{
+    @apply text-primary;
+}
+
+
+.animae:hover img{
+    background-color: white;
+}

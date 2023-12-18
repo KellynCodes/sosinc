@@ -87,8 +87,11 @@
         <p>Message cannot be less than 100 characters.</p>
         }
         <button
-          class="w-full rounded-b-lg h-14 bg-accent text-primary hover:bg-primary hover:border-t hover:border-t-white hover:text-white capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all cursor-pointer outline-none border-r-0 border-b-0 border-l-0"
+          class="{{
+            isSending() ? 'cursor-not-allowed' : 'cursor-pointer'
+          }} w-full rounded-b-lg h-14 bg-accent text-primary hover:bg-primary hover:border-t hover:border-t-white hover:text-white capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all outline-none border-r-0 border-b-0 border-l-0"
           type="submit"
+          [disabled]="isSending()"
         >
           {{ isSending() ? "Sending..." : "Send" }}
         </button>
@@ -96,15 +99,14 @@
     </form>
 
     <div
-      class="w-full h-auto md:w-[48%] flex flex-wrap items-center justify-center py-2 px-3 gap-4"
+      class="w-full h-auto md:w-[48%] flex flex-wrap items-center justify-center py-2 gap-4"
     >
       <div class="animae">
         <img class="mb-4" src="/assets/svgs/phone.svg" alt="phone" />
-        <p>(237) 681-812-255</p>
-        <p>(237) 666-331-894</p>
+        <a href="tel:237-681-812-255">(237) 681-812-255</a>
       </div>
       <div class="animae">
-        <img class="'mb-4" src="/assets/svgs/location.svg" alt="Our Location" />
+        <img class="mb-4" src="/assets/svgs/location.svg" alt="Our Location" />
         <h2>Location</h2>
         <a
           class="text-sm font-normal"
@@ -117,8 +119,11 @@
       <div class="animae">
         <img src="/assets/svgs/email.svg" alt="Our contact email" />
         <h2>Email</h2>
-        <p>fildineeesoe&commat;gmil.com</p>
-        <p>myebstudios&commat;gmail.com</p>
+        <a
+          class="text-[0.6rem] md:text-sm font-normal"
+          href="mailto:info&commat;specializedorthosurgeons.com"
+          >info&commat;specializedorthosurgeons.com</a
+        >
       </div>
       <div class="animae">
         <img

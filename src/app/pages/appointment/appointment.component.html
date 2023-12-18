@@ -1,17 +1,17 @@
 <div class="w-screen h-auto">
-  <sosinc-page-header page="Appointment" pageTitle="Make Your Appointment" />
+  <sosinc-page-header page="Appointment" pageTitle="Book Your Appointment" />
 
-  <div class="w-full h-fit flex items-center justify-center p-4 shadow">
+  <div
+    class="w-full flex-wrap h-fit flex items-center justify-center p-4 shadow gap-x-4"
+  >
     <div
       class="w-full md:w-[48%] h-auto flex flex-col items-center justify-between gap-y-4"
     >
       <div class="w-full flex flex-col items-start justify-start gap-y-4">
-        <h1 class="font-bold text-3xl">Book Your Appointment</h1>
         <p class="text-base text-black mt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          possimus consequuntur alias quis nam id delectus dolorum commodi
-          tenetur impedit iste fugit earum excepturi quae, sit quidem ut soluta
-          deserunt.
+          Take the first step toward optimal musculoskeletal health – Secure
+          your personalized consultation with our expert orthopedic team today
+          and embark on a journey to enhanced well-being
         </p>
       </div>
 
@@ -21,13 +21,13 @@
         [formGroup]="appointmentForm"
       >
         <div
-          class="flex flex-col rounded-lg bg-primary items-center justify-center w-full h-fit p-y-0"
+          class="flex flex-col rounded-lg bg-primary items-center justify-center w-full h-fit py-0"
         >
           <div
             class="w-full h-14 flex items-center justify-center border-b-2 border-white"
           >
             <input
-              class="w-[50%] rounded-tl-lg border-b-0 border-r border-r-white placeholder:text-white"
+              class="w-[50%] rounded-tl-lg border-r border-b-2 border-b-white border-r-white placeholder:text-white"
               type="name"
               placeholder="Enter Your Name"
               formControlName="name"
@@ -35,12 +35,12 @@
               id="name"
             />
             <select
-              class="w-[50%] rounded-tr-lg border-b-0 placeholder:text-white"
+              class="w-[50%] rounded-tr-lg border-b-2 border-b-white text-white placeholder:text-white"
               formControlName="gender"
               name="gender"
               id="gender"
             >
-              <option value="Gender">Gender</option>
+              <option value="">Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
@@ -82,15 +82,24 @@
             }
           </div>
           <select
-            class="w-full border-b border-b-white placeholder:text-white"
+            class="w-full border-b border-b-white placeholder:text-white text-white"
             formControlName="department"
             name="department"
             id="department"
           >
             <option value="">Department</option>
-            @for (service of services(); track service.id) {
-            <option value="{{ service.id }}">{{ service.name }}</option>
-            }
+            <option value="physical therapy" class="capitalize">
+              physical therapy
+            </option>
+            <option value="therapeutic massage" class="capitalize">
+              therapeutic massage
+            </option>
+            <option value="myofascial release" class="capitalize">
+              myofascial release
+            </option>
+            <option value="women's health" class="capitalize">
+              women's health
+            </option>
           </select>
           @if(isInputValid('department','required')){
           <p>Department is required.</p>
@@ -100,7 +109,7 @@
             id="message"
             formControlName="message"
             cols="30"
-            rows="9"
+            rows="5.5"
             placeholder="Write Your Message"
           ></textarea>
           @if(isInputValid('message', "required")){
@@ -109,8 +118,11 @@
           <p>Message cannot be less than 100 characters.</p>
           }
           <button
-            class="w-full rounded-b-lg h-14 bg-accent text-primary hover:bg-primary hover:border-t hover:border-t-white hover:text-white capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all cursor-pointer outline-none border-r-0 border-b-0 border-l-0"
+            class="{{
+              isSending() ? 'cursor-not-allowed' : 'cursor-pointer'
+            }} w-full rounded-b-lg h-14 bg-accent text-primary hover:bg-primary hover:border-t hover:border-t-white hover:text-white capitalize font-normal flex items-center justify-center px-5 py-3 text-sm md:text-lg text-center transition-all outline-none border-r-0 border-b-0 border-l-0"
             type="submit"
+            [disabled]="isSending()"
           >
             {{ isSending() ? "Sending..." : "Send" }}
           </button>
@@ -118,7 +130,42 @@
       </form>
     </div>
     <div
-      class="w-full md:w-[48%] h-full shadow flex items-center justify-center"
-    ></div>
+      class="w-full h-auto md:w-[48%] flex flex-wrap items-center justify-center mb-6 my-10 gap-4"
+    >
+      <div class="animae">
+        <img class="mb-4" src="/assets/svgs/phone.svg" alt="phone" />
+        <a href="tel:237-681-812-255">(237) 681-812-255</a>
+      </div>
+      <div class="animae">
+        <img class="'mb-4" src="/assets/svgs/location.svg" alt="Our Location" />
+        <h2>Location</h2>
+        <a
+          class="text-sm font-normal"
+          href="https://maps.app.goo.gl/c8ghPzKvT5FxjL1c8"
+        >
+          Specialized Orthopedic Surgeons, INC. 1010 Nut Tree Road, Vacaville,
+          CA, 95687
+        </a>
+      </div>
+      <div class="animae">
+        <img src="/assets/svgs/email.svg" alt="Our contact email" />
+        <h2>Email</h2>
+        <a
+          href="mailto:info&commat;specializedorthosurgeons.com"
+          class="text-[0.6rem] md:text-sm font-normal"
+          >info&commat;specializedorthosurgeons.com</a
+        >
+      </div>
+      <div class="animae">
+        <img
+          class="mb-4"
+          src="/assets/svgs/working-hour.svg"
+          alt="Our Working hour"
+        />
+        <h2>Working Hour</h2>
+        <p>Mon-Sat 09:00-20:00</p>
+        <p>Sunday Emergency only</p>
+      </div>
+    </div>
   </div>
 </div>
