@@ -1,6 +1,10 @@
 import emailjs from '@emailjs/browser';
 import { Component, signal } from '@angular/core';
-import { PageHeaderComponent } from '../../components';
+import {
+  CtaComponent,
+  FaqsComponent,
+  PageHeaderComponent,
+} from '../../components';
 import { HttpStatusCode } from '@angular/common/http';
 import {
   FormBuilder,
@@ -16,7 +20,13 @@ import { ServiceData } from '../../../libs/data';
 @Component({
   selector: 'sosinc-appointment',
   standalone: true,
-  imports: [PageHeaderComponent, FormsModule, ReactiveFormsModule],
+  imports: [
+    PageHeaderComponent,
+    FormsModule,
+    ReactiveFormsModule,
+    FaqsComponent,
+    CtaComponent,
+  ],
   templateUrl: './appointment.component.html',
   styleUrl: './appointment.component.scss',
 })
