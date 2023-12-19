@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderSettings } from '../../../libs/data/slick.slider.setting';
+import { TestimonialDto } from '../../../libs/types';
+import { Testimonials } from '../../../libs/data/testimonials.data';
 
 @Component({
   selector: 'sosinc-testimonials',
@@ -11,7 +13,5 @@ import { SliderSettings } from '../../../libs/data/slick.slider.setting';
 })
 export class TestimonialsComponent {
   sliderConfig = SliderSettings;
-  ngOnInit(): void {
-    console.log(this.sliderConfig);
-  }
+  slides = signal<TestimonialDto[]>(Testimonials);
 }
