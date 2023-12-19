@@ -1,0 +1,13 @@
+.testimonial-container {
+  @apply bg-transparent relative flex items-center justify-center flex-col min-h-screen w-full h-auto py-10 object-cover z-0;
+  background-image: url("../../../assets/images/orthopedic/orthosurgery.jpg");
+  background-repeat: no-repeat;
+  background-position:  center;
+  background-size: cover;
+}
+
+.testimonial-container::after {
+  content: "";
+  @apply h-screen w-screen bg-[#1f2b6c9b] inset-0 absolute z-0;
+}
+

@@ -58,8 +58,27 @@ li{
 // }
 
 body{
-     @apply font-inter overflow-x-hidden;
+     @apply font-sans overflow-x-hidden;
 }
+
+.slick-slide > div {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+
+
+.slick-dots li .slick-active button:before{
+ color: #BFD2F8 !important;
+}
+
+.slick-dots li button:before {
+  color: #FCFEFE;
+  font-size: 20px !important;
+  margin: 2rem 0 0 0 !important;
+}
+
+
 
 /* Define the styles for the scrollbar track and thumb */
 /* Define the styles for the scrollbar track and thumb */
