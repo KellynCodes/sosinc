@@ -67,7 +67,7 @@ export const ContactLinks: LinkDto[] = [
     type: LinkType.href,
     url: 'https://maps.app.goo.gl/c8ghPzKvT5FxjL1c8',
     linkText:
-      'Specialized Orthopedic Surgeons, INC. 1010 Nut Tree Road, Vacaville, CA, 95687',
+      'Specialized Orthopedic Surgeons, Inc. 1010 Nut Tree Road, Vacaville, CA, 95687',
   },
   {
     id: 4,
