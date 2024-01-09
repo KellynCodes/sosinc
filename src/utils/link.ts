@@ -52,9 +52,9 @@ export const ImportantLinks: LinkDto[] = [
 export const ContactLinks: LinkDto[] = [
   {
     id: 1,
-    url: 'tel:(237) 681-812-255',
+    url: 'tel:+707-633-9805',
     type: LinkType.href,
-    linkText: 'Call: (237) 681-812-255',
+    linkText: 'Call: +707-633-9805',
   },
   {
     id: 2,
