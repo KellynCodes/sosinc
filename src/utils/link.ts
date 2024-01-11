@@ -54,7 +54,7 @@ export const ContactLinks: LinkDto[] = [
     id: 1,
     url: 'tel:+707-633-9805',
     type: LinkType.href,
-    linkText: 'Call: +707-633-9805',
+    linkText: 'Call: (707)-633-9805',
   },
   {
     id: 2,
